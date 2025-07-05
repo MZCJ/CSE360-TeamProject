@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.asu.sundevil.LoginController"
+      spacing="10" alignment="CENTER" prefWidth="300" prefHeight="200">
+    <Label text="BookStore Login" style="-fx-font-size: 16px;"/>
+    <TextField fx:id="usernameField" promptText="Username"/>
+    <PasswordField fx:id="passwordField" promptText="Password"/>
+    <Button text="Login" onAction="#handleLoginButtonAction" maxWidth="Infinity"/>
+    <Label fx:id="messageLabel"/>
+</VBox>

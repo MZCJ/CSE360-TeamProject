@@ -61,6 +61,7 @@ public class UIApp extends Application {
         roleBox.setValue("Buyer");  // Buyer
 
         Button loginBtn = new Button("Login");
+        loginBtn.setStyle("-fx-background-color: #3f7ddf; -fx-text-fill: white;");
         Label msgLabel = new Label();
 
         // Logic for login button: accepts any username/password, routed only by role
@@ -154,6 +155,7 @@ public class UIApp extends Application {
         refresh.setOnAction(e -> tv.setItems(FXCollections.observableList(DataService.listings)));
 
         Button buy = new Button("Purchase Selected");
+        
         buy.setOnAction(e -> {
             BookListing sel = tv.getSelectionModel().getSelectedItem();
             if (sel != null && "ACTIVE".equals(sel.getStatus())) {
@@ -174,6 +176,7 @@ public class UIApp extends Application {
         });
 
         Button logout = new Button("Logout");
+        logout.setStyle("-fx-background-color: #3f7ddf; -fx-text-fill: white;");
         logout.setOnAction(e -> {
             DataService.saveAll();
             stage.setScene(loginScene);
@@ -192,6 +195,7 @@ public class UIApp extends Application {
     private void buildSellerScene() {
         // Logout
         Button logoutBtn = new Button("Logout");
+        logoutBtn.setStyle("-fx-background-color: #3f7ddf; -fx-text-fill: white;");
         logoutBtn.setOnAction(e -> stage.setScene(loginScene));
 
         // Form controls
@@ -328,6 +332,7 @@ public class UIApp extends Application {
         );
 
         Button logout = new Button("Logout");
+        logout.setStyle("-fx-background-color: #3f7ddf; -fx-text-fill: white;");
         logout.setOnAction(e-> { DataService.saveAll(); stage.setScene(loginScene); });
 
         VBox layout = new VBox(20,
